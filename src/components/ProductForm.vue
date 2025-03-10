@@ -99,6 +99,10 @@ watch(
   },
   { deep: true },
 )
+
+defineExpose({
+  clearForm,
+})
 </script>
 
 <style scoped>
