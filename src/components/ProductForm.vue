@@ -22,7 +22,7 @@
             alt="Uploaded Image"
             class="preview"
           />
-          <button class="delete-btn" @click="removeImage(index)">×</button>
+          <button type="button" class="delete-btn" @click="removeImage(index)">×</button>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@ const props = defineProps({
 const emit = defineEmits(['submit'])
 
 /*------------------- DATA -------------------*/
-const formData = ref({ ...props.item })
+const formData = ref({ ...props.item, images: [...props.item.images] })
 const isEdit = ref(!!props.item?.name)
 const isModalOpen = ref(false)
 const selectedImage = ref(null)

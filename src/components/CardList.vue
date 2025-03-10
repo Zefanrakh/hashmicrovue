@@ -8,7 +8,7 @@
 import Card from './Card.vue'
 
 /*------------------- PROPS -------------------*/
-defineProps({
+const props = defineProps({
   items: Array,
 })
 </script>

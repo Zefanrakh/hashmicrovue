@@ -163,6 +163,7 @@ export const useProductStore = defineStore('product', () => {
         databaseItems.value.push({
           id: Math.max(...databaseItems.value.map((item) => item.id)) + 1,
           ...newItem,
+          images: newItem.images ? [...newItem.images] : [],
         })
         newlyAddedItem.value = 1
         await fetchItems(true)
@@ -178,7 +179,10 @@ export const useProductStore = defineStore('product', () => {
       setTimeout(async () => {
         const databaseItemIndex = databaseItems.value.findIndex((item) => item.id === id)
         if (databaseItemIndex > -1) {
-          databaseItems.value[databaseItemIndex] = { ...item }
+          databaseItems.value[databaseItemIndex] = {
+            ...item,
+            images: item.images ? [...item.images] : [],
+          }
         }
         await fetchItems(true)
         isLoading.value = false

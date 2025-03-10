@@ -1,7 +1,11 @@
 <template>
   <CustomButton variant="secondary" @click="toggleModal">Edit</CustomButton>
   <Modal :open="isModalOpen" @close="toggleModal">
-    <ProductForm :item="item" @submit="updateItem" />
+    <ProductForm
+      :key="`edit-${item.id}-${item.images?.length}`"
+      :item="item"
+      @submit="updateItem"
+    />
   </Modal>
 </template>
 

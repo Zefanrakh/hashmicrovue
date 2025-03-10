@@ -22,11 +22,10 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import DeleteButton from './DeleteButton.vue'
 import EditButton from './EditButton.vue'
 import noImage from '@/assets/no_image_available.svg'
-import ImagesSlider from './ImagesSlider.vue'
 import ImagesSliderWithModal from './ImagesSliderWithModal.vue'
 
 /*------------------- PROPS -------------------*/

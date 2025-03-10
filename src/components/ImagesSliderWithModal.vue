@@ -6,6 +6,7 @@
     :item-id="itemId"
   />
   <ImagesSlider
+    :key="`${itemId}-${images.length}`"
     v-else
     ref="ImagesSliderRef"
     @click="onSliderClick"
@@ -14,6 +15,7 @@
   />
   <Modal :open="isModalOpen" @close="toggleModal">
     <ImagesSlider
+      :key="`in-modal-${itemId}-${images.length}`"
       container-height="max-content"
       ref="ImagesSliderRef"
       :images="images"
