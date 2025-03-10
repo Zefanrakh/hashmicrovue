@@ -66,7 +66,9 @@ watch(
   background: white;
   padding: 0px;
   border-radius: 8px;
-  width: 400px;
+  width: 100%;
+  margin: 0 15px;
+  max-width: 400px;
   position: relative;
   transform: scaleY(0) scaleX(0);
   opacity: 1;

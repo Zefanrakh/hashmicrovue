@@ -1,28 +1,26 @@
 <template>
-  <Layout>
-    <div class="product">
-      <h1>Our Products</h1>
-      <CustomButton :loading="productStore.isLoading" variant="primary" @click="openModal"
-        >Create New</CustomButton
+  <div class="product">
+    <h1>Our Products</h1>
+    <CustomButton :loading="productStore.isLoading" variant="primary" @click="openModal"
+      >Create New</CustomButton
+    >
+
+    <CardListSkeletonLoader v-if="productStore.isLoading && productStore.items.length === 0" />
+    <CardList v-else :items="productStore.items" />
+
+    <div v-if="productStore.items.length > 0" class="load-more-container">
+      <CustomButton v-if="!productStore.isLoading" variant="secondary" @click="loadMore"
+        >Load More</CustomButton
       >
-
-      <CardListSkeletonLoader v-if="productStore.isLoading && productStore.items.length === 0" />
-      <CardList v-else :items="productStore.items" />
-
-      <div v-if="productStore.items.length > 0" class="load-more-container">
-        <CustomButton v-if="!productStore.isLoading" variant="secondary" @click="loadMore"
-          >Load More</CustomButton
-        >
-        <CardListSkeletonLoader v-else />
-      </div>
+      <CardListSkeletonLoader v-else />
     </div>
+  </div>
 
-    <FloatingButton @click="openModal">+</FloatingButton>
+  <FloatingButton @click="openModal">+</FloatingButton>
 
-    <Modal :open="isModalOpen" @close="closeModal">
-      <ProductForm ref="CreateProductForm" @submit="addItem" />
-    </Modal>
-  </Layout>
+  <Modal :open="isModalOpen" @close="closeModal">
+    <ProductForm ref="CreateProductForm" @submit="addItem" />
+  </Modal>
 </template>
 
 <script setup>
