@@ -2,7 +2,7 @@
   <div class="slider-container" ref="sliderContainer">
     <div class="swiper-wrapper" ref="sliderTrack">
       <div v-for="(image, imgIndex) in images" :key="`${itemId}-${imgIndex}`" class="swiper-slide">
-        <img :src="image" alt="Product Image" />
+        <img :src="image" alt="Product Image" class="slider-overflow-image" />
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@ defineProps({
   cursor: pointer;
 }
 
-img {
+.slider-overflow-image {
   height: 100px;
 }
 
