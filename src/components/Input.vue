@@ -194,7 +194,7 @@ select:focus-visible {
 
     & > label {
       position: absolute;
-      top: 0%;
+      top: 5%;
       left: 10px;
       color: gray;
       font-size: 16px;
