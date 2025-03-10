@@ -9,6 +9,7 @@
 </template>
 
 <script setup>
+/*------------------- PROPS -------------------*/
 defineProps({
   images: Array,
   itemId: Number,

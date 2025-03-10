@@ -3,7 +3,7 @@
     <div class="home">
       <h1>Welcome to HashMicro UI</h1>
       <p>This is a simple non-functional Product system UI.</p>
-      <CustomButton variant="primary">Go to Our Products</CustomButton>
+      <CustomButton variant="primary" @click="goToProducts">Go to Our Products</CustomButton>
     </div>
   </Layout>
 </template>
@@ -11,6 +11,15 @@
 <script setup>
 import Layout from '../components/layouts/Layout.vue'
 import CustomButton from '../components/Button.vue'
+import { useRouter } from 'vue-router'
+
+/*------------------- ROUTER -------------------*/
+const router = useRouter()
+
+/*------------------- FUNCTION -------------------*/
+const goToProducts = () => {
+  router.push('/product')
+}
 </script>
 
 <style scoped>
