@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <CustomButton variant="secondary" @click="toggleModal">Delete</CustomButton>
+  <CustomButton variant="secondary" @click="toggleModal">Delete</CustomButton>
 
-    <Modal :open="isModalOpen" @close="toggleModal">
-      <h3>Are you sure you want to delete this item?</h3>
-      <p>{{ item.name }}</p>
-      <div class="modal-actions">
-        <CustomButton variant="secondary" @click="toggleModal">Cancel</CustomButton>
-        <CustomButton variant="primary" @click="deleteItem">Yes, Delete</CustomButton>
-      </div>
-    </Modal>
-  </div>
+  <Modal :open="isModalOpen" @close="toggleModal">
+    <h3>Are you sure you want to delete this item?</h3>
+    <p>{{ item.name }}</p>
+    <div class="modal-actions">
+      <CustomButton variant="secondary" @click="toggleModal">Cancel</CustomButton>
+      <CustomButton variant="primary" @click="deleteItem">Yes, Delete</CustomButton>
+    </div>
+  </Modal>
 </template>
 
 <script setup>
