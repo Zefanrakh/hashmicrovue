@@ -1,11 +1,7 @@
 <template>
   <div class="slider-container" ref="sliderContainer">
     <div class="swiper-wrapper" ref="sliderTrack">
-      <div
-        v-for="(image, imgIndex) in props.images"
-        :key="`${itemId}-${imgIndex}`"
-        class="swiper-slide"
-      >
+      <div v-for="(image, imgIndex) in props.images" :key="`${itemId}-${imgIndex}`" class="swiper-slide">
         <img :src="image" alt="Product Image" />
       </div>
     </div>
@@ -23,7 +19,7 @@ const props = defineProps({
   itemId: Number,
   containerHeight: {
     type: String,
-    default: '150 px',
+    default: '150px',
   },
 })
 
