@@ -1,0 +1,33 @@
+<template>
+  <div class="slider-container" ref="sliderContainer">
+    <div class="swiper-wrapper" ref="sliderTrack">
+      <div v-for="(image, imgIndex) in images" :key="`${itemId}-${imgIndex}`" class="swiper-slide">
+        <img :src="image" alt="Product Image" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+defineProps({
+  images: Array,
+  itemId: Number,
+})
+</script>
+
+<style scoped>
+.swiper-wrapper {
+  overflow-x: scroll;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
+img {
+  height: 100px;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+}
+</style>
