@@ -12,7 +12,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #f57c00;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 50%;
@@ -41,7 +41,7 @@
 }
 
 .floating-button:hover {
-  background-color: #d36b00;
+  background-color: var(--primary-hover);
 }
 
 .floating-button:hover .border-spinner {

@@ -39,21 +39,21 @@ defineProps({
 }
 
 .btn.primary {
-  background-color: #f57c00;
+  background-color: var(--primary-color);
   color: white;
 }
 
 .btn.primary:hover {
-  background-color: #d36b00;
+  background-color: var(--primary-hover);
 }
 
 .btn.secondary {
-  background-color: #d32f2f;
+  background-color: var(--secondary-color);
   color: white;
 }
 
 .btn.secondary:hover {
-  background-color: #b71c1c;
+  background-color: var(--secondary-hover);
 }
 
 .btn.loading {

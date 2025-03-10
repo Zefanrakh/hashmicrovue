@@ -104,7 +104,7 @@ onUnmounted(() => {
   position: absolute;
   top: 15px;
   right: -50px;
-  background: #f57c00;
+  background: var(--primary-color);
   color: white;
   border: none;
   font-size: 24px;
@@ -131,7 +131,7 @@ onUnmounted(() => {
 }
 
 .nav-links a:hover {
-  color: #f57c00;
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

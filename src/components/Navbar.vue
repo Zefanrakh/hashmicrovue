@@ -36,6 +36,6 @@
 }
 
 .nav-links a:hover {
-  color: #f57c00;
+  color: var(--primary-color);
 }
 </style>

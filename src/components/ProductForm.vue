@@ -117,7 +117,7 @@ defineExpose({
 }
 
 .upload-label {
-  background: #f57c00;
+  background: var(--primary-color);
   color: white;
   padding: 8px 15px;
   border-radius: 5px;
@@ -128,7 +128,7 @@ defineExpose({
 }
 
 .upload-label:hover {
-  background: #d36b00;
+  background: var(--primary-hover);
 }
 
 .image-preview {

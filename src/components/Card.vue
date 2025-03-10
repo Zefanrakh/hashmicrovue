@@ -91,7 +91,7 @@ const toggleExpand = () => {
 
 .card-price {
   font-size: 16px;
-  color: #f57c00;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -102,7 +102,7 @@ const toggleExpand = () => {
 }
 
 .see-more {
-  color: #f57c00;
+  color: var(--primary-color);
   cursor: pointer;
   font-weight: bold;
 }
